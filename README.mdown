@@ -1,0 +1,17 @@
+Predator-iOS-Technion
+==============
+
+Predator is an award-winning, real-time algorithm for tracking of unknown objects in video streams. The object of interest is defined by a bounding box in a single frame. Predator simultaneously Tracks the object, Learns its appearance and detects it whenever it appears in the video. The result is a real-time tracking that typically improves over time.
+ 
+Predator has been developed by Zdenek Kalal during his PhD thesis supervised by Krystian Mikolajczyk and Jiri Matas.
+ 
+This implementation of the Predator was coded by Marian Mansour and Majd Srour during their Bachelor Degree at the Technion under the supervision of Aaron Wetzler and Prof. Ron Kimmel .
+ 
+We'd like to thank Aaron for all the time spent supporting and helping us reaching our goal. Also, we'd like to thank Anton Anton for his help with the graphics and UI.
+
+[![](https://github.com/kenguish/Predator-iOS-Technion/raw/master/Screenshot.png)](https://github.com/kenguish/Predator-iOS-Technion/raw/master/Screenshot.png)
+
+
+Fixs by kenguish:
+- Compatibility with iOS 6+
+- Minor OpenCV 2 dependencies

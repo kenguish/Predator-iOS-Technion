@@ -387,24 +387,14 @@
 			isa = PBXGroup;
 			children = (
 				84C8B5AA145725440099ED27 /* PredatorAppDelegate.h */,
-				84CC0AD5146817CD00C888ED /* Parameters.h */,
 				84C8B5AB145725440099ED27 /* PredatorAppDelegate.m */,
+				84CC0AD5146817CD00C888ED /* Parameters.h */,
 				84C8B5AD145725440099ED27 /* MainWindow.xib */,
-				84C8B5B0145725440099ED27 /* PredatorViewController.h */,
-				84C8B5B1145725440099ED27 /* PredatorViewController.m */,
-				84B55E4314670750000CDE4C /* AdvanceCameraViewController.h */,
-				84B55E4414670751000CDE4C /* AdvanceCameraViewController.m */,
-				84B55E4514670751000CDE4C /* AdvanceCameraViewController.xib */,
-				84C8B6F01458496E0099ED27 /* AboutViewController.h */,
-				84C8B6F11458496E0099ED27 /* AboutViewController.m */,
-				84C8B6F21458496E0099ED27 /* AboutViewController.xib */,
-				84C8B5D014572E580099ED27 /* CameraViewController.h */,
-				84C8B5D114572E580099ED27 /* CameraViewController.mm */,
-				84C8B5D214572E580099ED27 /* CameraViewController.xib */,
-				84C8B5B3145725440099ED27 /* PredatorViewController.xib */,
-				84C8B6EB14583DC60099ED27 /* VideoViewController.h */,
-				84C8B6EC14583DC60099ED27 /* VideoViewController.mm */,
-				84C8B6ED14583DC60099ED27 /* VideoViewController.xib */,
+				9FFE50D7177AC5100036E70F /* Predator View */,
+				9FFE50D6177AC50A0036E70F /* Camera */,
+				9FFE50D4177AC5010036E70F /* About */,
+				9FFE50D5177AC5060036E70F /* Camera */,
+				9FFE50D8177AC51B0036E70F /* Video view */,
 				84C8B5A2145725440099ED27 /* Supporting Files */,
 			);
 			path = Predator;
@@ -616,6 +606,56 @@
 				84C8B68514583D2D0099ED27 /* 100.png */,
 			);
 			name = video_Img;
+			sourceTree = "<group>";
+		};
+		9FFE50D4177AC5010036E70F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				84C8B6F01458496E0099ED27 /* AboutViewController.h */,
+				84C8B6F11458496E0099ED27 /* AboutViewController.m */,
+				84C8B6F21458496E0099ED27 /* AboutViewController.xib */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		9FFE50D5177AC5060036E70F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				84C8B5D014572E580099ED27 /* CameraViewController.h */,
+				84C8B5D114572E580099ED27 /* CameraViewController.mm */,
+				84C8B5D214572E580099ED27 /* CameraViewController.xib */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		9FFE50D6177AC50A0036E70F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				84B55E4314670750000CDE4C /* AdvanceCameraViewController.h */,
+				84B55E4414670751000CDE4C /* AdvanceCameraViewController.m */,
+				84B55E4514670751000CDE4C /* AdvanceCameraViewController.xib */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		9FFE50D7177AC5100036E70F /* Predator View */ = {
+			isa = PBXGroup;
+			children = (
+				84C8B5B0145725440099ED27 /* PredatorViewController.h */,
+				84C8B5B1145725440099ED27 /* PredatorViewController.m */,
+				84C8B5B3145725440099ED27 /* PredatorViewController.xib */,
+			);
+			name = "Predator View";
+			sourceTree = "<group>";
+		};
+		9FFE50D8177AC51B0036E70F /* Video view */ = {
+			isa = PBXGroup;
+			children = (
+				84C8B6EB14583DC60099ED27 /* VideoViewController.h */,
+				84C8B6EC14583DC60099ED27 /* VideoViewController.mm */,
+				84C8B6ED14583DC60099ED27 /* VideoViewController.xib */,
+			);
+			name = "Video view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
