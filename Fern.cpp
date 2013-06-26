@@ -18,6 +18,8 @@
 #include "Fern.h"
 #define POWER 1
 
+#import <stdio.h>
+#import <stdlib.h>
 
 Fern::Fern(int nodeNum) {
     nodeCount = nodeNum;

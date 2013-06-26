@@ -159,6 +159,8 @@
 		84CC0B01146C32FF00C888ED /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84CC0B00146C32FF00C888ED /* haarcascade_frontalface_alt_tree.xml */; };
 		84CC0B04146C33A900C888ED /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84CC0B03146C33A900C888ED /* haarcascade_frontalface_alt.xml */; };
 		84CC0B0E1470462800C888ED /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84CC0B0D1470462700C888ED /* icon.jpg */; };
+		9FFE50D1177AC1A00036E70F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFE50D0177AC1A00036E70F /* opencv2.framework */; };
+		9FFE50D3177AC1AA0036E70F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFE50D2177AC1AA0036E70F /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -320,6 +322,8 @@
 		84CC0B00146C32FF00C888ED /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
 		84CC0B03146C33A900C888ED /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
 		84CC0B0D1470462700C888ED /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		9FFE50D0177AC1A00036E70F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		9FFE50D2177AC1AA0036E70F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,9 +331,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFE50D3177AC1AA0036E70F /* libstdc++.dylib in Frameworks */,
 				84C8B6F6145894C60099ED27 /* QuartzCore.framework in Frameworks */,
 				84C8B5C9145726ED0099ED27 /* CoreMedia.framework in Frameworks */,
 				84C8B5CA145726ED0099ED27 /* CoreVideo.framework in Frameworks */,
+				9FFE50D1177AC1A00036E70F /* opencv2.framework in Frameworks */,
 				84C8B5C6145726DB0099ED27 /* Accelerate.framework in Frameworks */,
 				84C8B5C4145726980099ED27 /* AVFoundation.framework in Frameworks */,
 				84C8B59C145725440099ED27 /* UIKit.framework in Frameworks */,
@@ -344,7 +350,6 @@
 		84C8B58C145725440099ED27 = {
 			isa = PBXGroup;
 			children = (
-				84C8B6F5145894C50099ED27 /* QuartzCore.framework */,
 				84C8B5D5145741250099ED27 /* Tld Classes */,
 				84C8B5CB145729D70099ED27 /* Resources */,
 				84C8B5A1145725440099ED27 /* Predator */,
@@ -364,6 +369,9 @@
 		84C8B59A145725440099ED27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FFE50D2177AC1AA0036E70F /* libstdc++.dylib */,
+				9FFE50D0177AC1A00036E70F /* opencv2.framework */,
+				84C8B6F5145894C50099ED27 /* QuartzCore.framework */,
 				84C8B5C7145726ED0099ED27 /* CoreMedia.framework */,
 				84C8B5C8145726ED0099ED27 /* CoreVideo.framework */,
 				84C8B5C5145726DB0099ED27 /* Accelerate.framework */,
@@ -635,6 +643,8 @@
 /* Begin PBXProject section */
 		84C8B58E145725440099ED27 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 84C8B591145725440099ED27 /* Build configuration list for PBXProject "Predator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -889,32 +899,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Predator/Predator-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/opt/local/include/,
-					/Users/majd/opencv/opencv_source/opencv/include/,
-				);
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Predator/Predator-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/admin/opencv-library/build/lib/debug-iphoneos-armv7",
-				);
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-lopencv_contrib",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_imgproc",
-					"-lopencv_legacy",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_video",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -926,31 +926,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Predator/Predator-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/opt/local/include/,
-					/Users/majd/opencv/opencv_source/opencv/include/,
-				);
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Predator/Predator-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/admin/opencv-library/build/lib/release-iphoneos-armv7",
-				);
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-lopencv_contrib",
-					"-lopencv_core",
-					"-lopencv_features2d",
-					"-lopencv_flann",
-					"-lopencv_imgproc",
-					"-lopencv_legacy",
-					"-lopencv_ml",
-					"-lopencv_objdetect",
-					"-lopencv_video",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "";
